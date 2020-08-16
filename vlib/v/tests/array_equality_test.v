@@ -43,6 +43,15 @@ fn test_array_equality() {
 	assert colors != [Color.green, Color.red, Color.blue]
 	assert colors != [Color.blue, Color.green, Color.red]
 	assert colors != [Color.blue, Color.red, Color.green]
+
+	assert strs != bools
+	assert !(strs == bools)
+	assert strs != ints
+	assert ints != bools
+	assert !(ints == bools)
+	assert ints != a
+	assert a != colors
+	assert !(a == colors)
 }
 
 fn test_nested_array_equality() {
